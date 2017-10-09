@@ -1,0 +1,266 @@
+
+<!DOCTYPE html><html><head>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"da771d87c0","applicationID":"13301311","transactionName":"JQ1aTUBcWA9dFhlMQUkFQVxBRxsQURBTFkEODUM=","queueTime":0,"applicationTime":123,"ttGuid":"","agentToken":null,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1059.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script><link href="https://static.xoedge.com/patterns/images/favicon.ico" rel="shortcut icon" /><meta charset="UTF-8" /><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" /><meta content="Welcome to Andrew Blum and Amanda Vance&#39;s Wedding Website! View photos, directions, registry details and more at The Knot." name="description" /><meta content="noindex, follow" name="robots" /><meta content="//media.xogrp.com/images/ce4225c6-a922-4a73-b492-8cbeeba80d89~rt_0-cr_0.0.5472.2736-rs_1024.h?compress=true" property="og:image" /><title>Andrew Blum and Amanda Vance&#39;s Wedding Website</title><link href="http://www.theknot.com/us/andrew-blum-and-amanda-vance-may-2018-9cd1d531-cbe0-40f0-b05a-3a91b6ad5966" rel="canonical" /><link data-turbolinks-track="true" href="https://static.xoedge.com/xo-guest-services/assets/guest/layouts/layout1/app-bef47a512cbe9d154e727129b5824fa2.css" media="all" rel="stylesheet" /><link data-turbolinks-track="true" href="https://www.dropbox.com/s/vq1juguwszuji0f/Andrewstheme.css?raw=1" media="all" rel="stylesheet" /><script data-turbolinks-track="true" src="https://static.xoedge.com/xo-guest-services/assets/guest-fee317256336c2cf56301d32fed14c4b.js"></script><script data-turbolinks-track="true" src="https://static.xoedge.com/xo-guest-services/assets/guest/layouts/layout1/layout-9b8d75fe582ee3e04ddd695fba5557ce.js"></script><script type="text/javascript">
+  window.analytics=window.analytics||[],window.analytics.methods=["group","track","page","pageview","alias","ready","on","once","off","trackLink","trackForm","trackClick","trackSubmit"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var key=window.analytics.methods[i];window.analytics[key]=window.analytics.factory(key)}window.analytics.load=function(t){if(!document.getElementById("analytics-js")){var a=document.createElement("script");a.type="text/javascript",a.id="analytics-js",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.io/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)}},window.analytics.SNIPPET_VERSION="2.0.9",
+  window.analytics.load('nibq354xak');
+</script><meta content="authenticity_token" name="csrf-param" />
+<meta content="fcKMB/YRl3gVrgLyrOVfZTt/MD0JvRpJp6rWAhGE/Do=" name="csrf-token" /><style>body { color:#191970;font-family:Work Sans;font-size:12px;font-style:normal; }  #wedding-date-location { color:#191970;font-family:Work Sans;font-size:18px;font-style:italic; } #wedding-countdown { color:#191970;font-family:Work Sans;font-size:18px;font-style:italic; }  .item-title { color:#191970;font-family:Alex Brush;font-size:28px;font-style:normal; }  div[class*='section-title'] { color:#191970;font-family:Alex Brush;font-size:40px;font-style:normal; }  #wedding-title { color:#191970;font-family:Alex Brush;font-size:58px;font-style:normal; }</style><script id="rsvp-modal-template" type="text/x-underscore-template">
+  <div class="dialog rsvp modal-container">
+    <div class="modal-overlay" />
+    <div class="dialog-region sm">
+      <div class="dialog-content">
+        <div class="dialog-header">
+          <span class="pull-left back-btn">Back</span>
+          <span class="section-title">RSVP</span>
+          <span class="close-btn pull-right icon icon-general-close"></span>
+        </div>
+        <div id="valid-error" class="hidden"></div>
+        <div class="dialog-body has-horizontal-padding">
+        </div>
+      </div>
+    </div>
+  </div
+</script>
+<script id='rsvp-search-template' type='text/x-underscore-template'>
+
+  <div class='match-not-found-message private-error-message'>
+    <p>Sorry, we can't find an exact match for "<span class='searched-name'></span>"</p>
+    <p>Please try again or contact the couple</p>
+  </div>
+
+  <p>We hope you can join us!</p>
+  <p>Please enter your name below.</p>
+
+  <div class='input-group'>
+    <input type='text' id='first-name' class='form-control' maxlength='255' placeholder='First Name'></input>
+  </div>
+
+  <div class='input-group'>
+    <input type='text' id='last-name' class='form-control' maxlength='255' placeholder='Last Name'></input>
+  </div>
+
+  <small class='invalid visible-xs'></small>
+  <div class='button-container'>
+    <button id='find-invite'>Find My Invitation</button>
+    <small class='invalid hidden-xs'></small>
+  </div>
+
+</script>
+<script id='rsvp-guest-template' type='text/x-underscore-template'>
+  <p class='rsvp-guest-counter'>Guest {%=guestIndex%} of
+    <span class='guest-total'>{%=guestTotal%}</span>:</p>
+  <p class='rsvp-guest-name'>{%-guest.first_name%} {%-guest.last_name%}</p>
+  {% if(guest.invitations.size() == 0) { %}
+    <p class='no-invites-message'>
+      Whoops, we can't find the invitation for "{%-guest.first_name%} {%-guest.last_name%}."
+      Try reaching out to {%=weddingCouple%} to RSVP.
+    </p>
+  {% } else { %}
+    <p>Will you be able to attend?</p>
+  {% } %}
+  <div class='rsvp-events-list'>
+  {% events.each(function(event) { %}
+    {% var eventId = event.get('id') %}
+    {% var invite = guest.invitations.findWhere({event_id: eventId}) %}
+    {% if(invite) { %}
+      <div class='rsvp-event' data-event-id={%=eventId%}>
+        <div class='rsvp-event-name'>{%-event.displayName()%}</div>
+        <div class='rsvp-event-datetime'>
+          {% if(event.get('date')) { %}
+            <span>{%=event.get('date')%}</span>
+            {% if(event.get('time')) { %} <span class='datetime-divider'>|</span> {% } %}
+          {% } %}
+          {% if(event.get('time')) { %}
+            <span>{%=event.get('time')%}</span>
+          {% } %}
+        </div>
+
+        <div class='rsvp-buttons rsvp-toggle-container form-control'>
+          <span>
+            <input type='radio' class='clickable rsvp-button rsvp-accept'
+            id='guest-{%=guestIndex%}-event-{%=eventId%}-accept'
+            name='guest-{%=guestIndex%}-event-{%=eventId%}'
+            value='true' {%=invite.get('rsvp') === true ? 'checked' : '' %}>
+            <label class='rsvp-button'
+              for='guest-{%=guestIndex%}-event-{%=eventId%}-accept'>Accept</label>
+          </span>
+          <span>
+            <input type='radio' class='clickable rsvp-button rsvp-regret'
+              id='guest-{%=guestIndex%}-event-{%=eventId%}-regret'
+              name='guest-{%=guestIndex%}-event-{%=eventId%}'
+              value='false' {%=invite.get('rsvp') === false ? 'checked' : '' %}>
+            <label class='rsvp-button'
+              for='guest-{%=guestIndex%}-event-{%=eventId%}-regret'>Regret</label>
+          </span>
+        </div>
+
+        <div class='rsvp-meals'>
+        {% if(event.get('meals').length) { %}
+          <select tabindex={%=invite.get('rsvp') !== true ? '"-1" disabled' : '"0"' %}
+              class='select-rsvp-meal form-control' id='meal-{%=guestIndex%}-{%=eventId%}'>
+            <option {%=invite.get('meal_id') === null ? 'selected' : '' %}
+              disabled value='default'>Select Meal Option</option>
+            {% event.get('meals').forEach(function(meal) { %}
+              <option {%=invite.get('meal_id') === meal.id ? 'selected' : '' %}
+                value='{%=meal.id%}'>{%-meal.name%}</option>
+            {% }) %}
+          </select>
+        {% } %}
+        </div>
+
+      </div>
+
+      <hr/>
+    {% } %}
+  {% }) %}
+  </div>
+
+  {% if (guestIndex == guestTotal && !private) { %}
+  <div class='add-party-member-container'>
+    <p>RSVP for another member of your party?</p>
+    <div class='add-party-member rsvp-toggle-container form-control'>
+      <span>
+        <input type='radio' class='clickable add-member-button'
+          id='add-party-member-{%=guestIndex%}'
+          name='add-party-member-{%=guestIndex%}' value='true'>
+        <label class='rsvp-button'
+          for='add-party-member-{%=guestIndex%}'>Yes</label>
+      </span>
+      <span>
+        <input type='radio' class='clickable add-member-button'
+          id='dont-add-party-member-{%=guestIndex%}'
+          name='add-party-member-{%=guestIndex%}' value='false'>
+        <label class='rsvp-button'
+          for='dont-add-party-member-{%=guestIndex%}'>No</label>
+      </span>
+    </div>
+  </div>
+  {% } %}
+
+  <small class='invalid visible-xs'></small>
+  <div class='button-container'>
+    <button class='next-guest'>Next</button>
+    <small class='invalid hidden-xs'></small>
+  </div>
+
+</script>
+<script id="rsvp-name-template" type="text/x-underscore-template">
+
+  <p>Please enter your guest's name.</p>
+
+  <div class="input-group">
+    <input type="text" id="first-name" class="form-control" maxlength="255" placeholder="First Name"></input>
+  </div>
+
+  <div class="input-group">
+    <input type="text" id="last-name" class="form-control" maxlength="255" placeholder="Last Name"></input>
+  </div>
+
+  <div class="button-container">
+    <button id="submit-guest-name">Next</button>
+    <small class='invalid'></small>
+  </div>
+
+</script>
+<script id='rsvp-summary-template' type='text/x-underscore-template'>
+  <p>Are your details correct?<br />Please confirm before submitting.</p>
+
+  <div class='rsvp-summary-guest-list'>
+  {% partyGuests.each(function(guest) { %}
+    <div class='rsvp-summary-guest'>
+      <div class='rsvp-summary-guest-name'>
+        {%-guest.get('first_name')%} {%-guest.get('last_name')%}
+      </div>
+      <div class='rsvp-summary-event-list'>
+      {% guest.get('invitations').each(function(invite) { %}
+        {% var event = events.findWhere({id: invite.get('event_id')}) %}
+        <div class='rsvp-summary-event'>
+          {% var rsvpStatusClass = ''%}
+          {% if(invite.get('rsvp') === true) { %}
+          {%   rsvpStatusClass = 'rsvp-yes icon-general-checkmark' %}
+          {% } else if(invite.get('rsvp') === false) { %}
+          {%   rsvpStatusClass = 'rsvp-no icon-general-close' %}
+          {% } %}
+          <span class='rsvp-status icon {%=rsvpStatusClass%}'></span>
+          <span class='event-name'>{%-event.displayName()%}</span>
+          {% if(event.get('meals').length && invite.get('meal_id')) { %}
+            {% var meal = _.findWhere(event.get('meals'), {id: invite.get('meal_id')}) %}
+            <span class='meal-selection'>({%-meal.name%})</span>
+          {% } %}
+        </div>
+      {% }) %}
+      </div>
+    </div>
+  {% }) %}
+  </div>
+
+  <div class='rsvp-summary-note'>
+    <p>Send a note to the couple (optional)</p>
+    <textarea class='form-control' rows='2' maxlength='320' name='rsvp-note' id='rsvp-note'>{%-rsvpNote%}</textarea>
+    <div class='char-count'>
+      <span class='chars-left'>{%=charsLeft%}</span> characters left
+    </div>
+  </div>
+
+  <div class='button-container'>
+    <button id='submit-rsvp'>Send RSVP</button>
+    <small class='invalid'></small>
+  </div>
+
+</script>
+<script id='duplicate-guest-addresses' type='text/x-underscore-template'>
+  <div class="{%- classNames %}">
+    <p>We&#39;ve found more than one match in the guest list.  Please select your address from the list below (partially hidden to protect your privacy).</p>
+
+    <div class="row col-xs-offset-1">
+      {% addresses.forEach(function(obj) { %}
+        <div class="clearfix">
+          <input type="radio" value="{%= obj.id %}" class="pull-left" name="guest-address" />
+          <label class="pull-left col-xs-offset-1" for="{%= obj.id%}">
+            {%- obj.address %}
+          </label>
+        </div>
+      {% })%}
+    </div>
+
+    <div class="row">
+      <small>If your address is not listed, please contact the couple to RSVP.</small>
+    </div>
+
+    <div class="button-container">
+      <button id="continue-rsvp" disabled>Next</button>
+    </div>
+  </div>
+</script>
+<script id='no-duplicate-addresses' type='text/x-underscore-template'>
+  <div class="{%- classNames %}">
+    <p>There&#39;s more than one "{%= firstName %} {%= lastName %}" on the guest list. Please contact {%= weddingCouple %} to RSVP.</p>
+
+    <br />
+
+    <p>TIP: The couple can add your address to their guest list so you can find your invitation.</p>
+
+    <br />
+
+    <div class='button-container'>
+      <button class='close-btn'>Close</button>
+    </div>
+  </div>
+</script>
+</head><body class="layout1" data-slug="andrew-blum-and-amanda-vance-may-2018-9cd1d531-cbe0-40f0-b05a-3a91b6ad5966"><div id="main-container-background"></div><div class="wedding-page" id="main-container"><div class="theme-image-container"><div class="theme-image"></div><div class="theme-image-layer-top"></div></div><div class="theme-image-container-left"><div class="theme-image-left"></div></div><div class="theme-image-container-right"><div class="theme-image-right"></div></div><div class="main-nav-container-container"><div class="has_content" id="main-nav-container"><div class="hidden" data-months-to-wedding="7" data-url="/us/andrew-blum-and-amanda-vance-may-2018-9cd1d531-cbe0-40f0-b05a-3a91b6ad5966" id="wedding-data"></div><div class="main-nav-container-inner"><div class="clearfix"><button class="main-nav">Menu</button></div><nav class="main-nav-hidden" id="main-nav"><ul><li><a class="selected" href="/us/andrew-blum-and-amanda-vance-may-2018-9cd1d531-cbe0-40f0-b05a-3a91b6ad5966">Our Wedding</a><ul><li><a class="selected" href="/us/andrew-blum-and-amanda-vance-may-2018-9cd1d531-cbe0-40f0-b05a-3a91b6ad5966#the-wedding">The Wedding</a></li><li><a class="selected" href="/us/andrew-blum-and-amanda-vance-may-2018-9cd1d531-cbe0-40f0-b05a-3a91b6ad5966#other-events">Other Events</a></li></ul></li><li><a class="" href="/us/andrew-blum-and-amanda-vance-may-2018-9cd1d531-cbe0-40f0-b05a-3a91b6ad5966/details">Helpful Info</a><ul><li><a class="" href="/us/andrew-blum-and-amanda-vance-may-2018-9cd1d531-cbe0-40f0-b05a-3a91b6ad5966/details#travel-and-transportation">Travel and Transportation</a></li><li><a class="" href="/us/andrew-blum-and-amanda-vance-may-2018-9cd1d531-cbe0-40f0-b05a-3a91b6ad5966/details#accommodations">Accommodations</a></li><li><a class="" href="/us/andrew-blum-and-amanda-vance-may-2018-9cd1d531-cbe0-40f0-b05a-3a91b6ad5966/details#things-to-do">Things to Do</a></li></ul></li><li><a class="" href="/us/andrew-blum-and-amanda-vance-may-2018-9cd1d531-cbe0-40f0-b05a-3a91b6ad5966/photos">Photos</a><ul class="photo-albums-nav" data-behavior="SocialWedding.fetchAlbums"></ul></li><li><a class="" href="/us/andrew-blum-and-amanda-vance-may-2018-9cd1d531-cbe0-40f0-b05a-3a91b6ad5966/registry">Registry</a><ul class="registry-nav" data-behavior="Registry.fetchRetailers"><li>loading...</li></ul></li><li><a class="" href="/us/andrew-blum-and-amanda-vance-may-2018-9cd1d531-cbe0-40f0-b05a-3a91b6ad5966/guest-book">Guest Book</a></li><li><a href="javascript:void(0)"><span class="rsvp-link" data-behavior="Guest.rsvpController.initRsvpDialog" data-has-registries="false" data-private-rsvp="true" data-reminder-date="2018-04-26 12:00:00 UTC" data-source="menu" data-wedding-couple="Andrew &amp;amp; Amanda" data-wedding-date="2018-05-26 12:00:00 UTC" data-wedding-slug="andrew-blum-and-amanda-vance-may-2018-9cd1d531-cbe0-40f0-b05a-3a91b6ad5966">RSVP</span></a></li></ul></nav></div></div></div><header id="header"><div class="header-background"></div><div id="cover-image"><img class="wide-cover-image" data-full-width="5472" src="//media.xogrp.com/images/ce4225c6-a922-4a73-b492-8cbeeba80d89~rt_0-cr_0.0.5472.2736-rs_1024.h?compress=true" /></div><div id="title-container"><h1 id="wedding-title">Andrew and Amanda</h1><h2 id="wedding-date-location"><span class="date-spacing"> &emsp; </span><span id="wedding-date">May 26, 2018</span><span class="date-spacing"> &emsp; </span><span id="separator"> &bull; </span><span id="wedding-location">Edgartown, MA</span></h2><h2 data-hide-countdown="false" data-wedding-date="2018-05-26" id="wedding-countdown"></h2></div></header><div id="content"><div class="content-background"></div><div class="page"><div class="page-background"></div><div class="page-sections"><div class="anchor" id="the-wedding"></div><div class="wedding-event-section"><div class="wedding-event-section-background"></div><div class="wedding-event-section-title-border-top"></div><div class="wedding-event-section-title">The Wedding</div><div class="wedding-event-section-title-border-bottom"></div><p class="wedding-event-section-description"></p><div class="wedding-event-section-items"><div class="wedding-event-item"><div class="wedding-event-title"></div><div class="wedding-event-date">Saturday, May 26, 2018<br>3:30 PM</br></div><div class="wedding-event-attire">Attire: Attire test</div><div class="wedding-event-button-container"><button class="rsvp-link" data-behavior="Guest.rsvpController.initRsvpDialog" data-has-registries="false" data-private-rsvp="true" data-reminder-date="2018-04-26 12:00:00 UTC" data-source="page" data-wedding-couple="Andrew &amp;amp; Amanda" data-wedding-date="2018-05-26 12:00:00 UTC" data-wedding-slug="andrew-blum-and-amanda-vance-may-2018-9cd1d531-cbe0-40f0-b05a-3a91b6ad5966"><span href="javascript:void(0)">RSVP</span></button></div><div class="wedding-event-separator"></div><div class="wedding-event-title item-title">Ceremony</div><div class="wedding-event-venue">The Old Whaling Church</div><div class="wedding-event-address">address</div><div class="wedding-event-separator"></div><div class="wedding-event-title item-title">Reception</div><div class="wedding-event-venue">The Harborview Hotel</div><div class="wedding-event-address">address</div><div class="wedding-event-separator"></div><div class="wedding-event-description"><p>notes test</p></div></div></div></div><div class="section-separator"></div><div class="anchor" id="other-events"></div><div class="event-section"><div class="event-section-background"></div><div class="event-section-title-border-top"></div><div class="event-section-title">Other Events</div><div class="event-section-title-border-bottom"></div><p class="event-section-description"></p><div class="event-section-items"><div class="event-item"><div class="event-title item-title">Rehearsal Dinner/Welcoming Party</div><div class="event-date">Friday, May 25, 2018<br>6:00 PM</br></div><div class="event-venue">Edgartown Yacht Club</div><div class="event-address">1 Dock St #1309, Edgartown, MA 02539, USA</div><div class="event-description"><p>This event is open to all that have arrived in time. Attire is casual, so feel free to stop by as soon as you get off the ferry. </p></div><div class="event-button-container"><button class="rsvp-link" data-behavior="Guest.rsvpController.initRsvpDialog" data-has-registries="false" data-private-rsvp="true" data-reminder-date="2018-04-26 12:00:00 UTC" data-source="page" data-wedding-couple="Andrew &amp;amp; Amanda" data-wedding-date="2018-05-26 12:00:00 UTC" data-wedding-slug="andrew-blum-and-amanda-vance-may-2018-9cd1d531-cbe0-40f0-b05a-3a91b6ad5966"><span href="javascript:void(0)">RSVP</span></button></div></div><div class="event-separator"></div><div class="event-item"><div class="event-title item-title">Brunch</div><div class="event-date"></div><div class="event-venue">The Blums&#39; (the Groom&#39;s parents) House</div><div class="event-address">136 Planting Field Way, Edgartown, MA, United States</div><div class="event-description"><p>description</p></div><div class="event-button-container"><button class="rsvp-link" data-behavior="Guest.rsvpController.initRsvpDialog" data-has-registries="false" data-private-rsvp="true" data-reminder-date="2018-04-26 12:00:00 UTC" data-source="page" data-wedding-couple="Andrew &amp;amp; Amanda" data-wedding-date="2018-05-26 12:00:00 UTC" data-wedding-slug="andrew-blum-and-amanda-vance-may-2018-9cd1d531-cbe0-40f0-b05a-3a91b6ad5966"><span href="javascript:void(0)">RSVP</span></button></div></div><div class="event-separator"></div></div></div><div class="section-separator"></div></div></div></div><div class="theme-image-container-bottom"><div class="theme-image-bottom"></div></div><div class="dialog modal-container reminder-email hidden"><div class="modal-overlay"></div><div class="dialog-region"><div class="dialog-content"><div class="dialog-header"><span class="close-btn pull-right icon icon-general-close"></span></div><div class="dialog-body has-padding"><div class="sent-icon"></div><p>Thanks, we've received your <span class="action"><span>.</p><hr /><p class="section-label">Schedule Your Reminder.</p><p>Sign up below and we'll remind you a month before the wedding to check back for all the details you need to know.</p><input class="form-control" id="reminder-email" placeholder="Enter Your Email" type="text" /><small class="invalid hidden">Please enter a valid email address.</small><div class="button-container"><button id="remind-me">Remind Me</button></div></div></div></div></div></div><div class="footer"><div class="footer-text">Created on The Knot, designed by Kate Spade New York for Paperless Post.<br>Getting married?  <a href="https://www.theknot.com/gs/wedding-websites" target="_blank">Create your wedding website for free</a>.</br></div></div><div id="rsvp-container"></div><script type="text/javascript">$(function(){
+  echo.init({
+    offset: 100,
+    throttle: 250,
+    unload: false
+  });
+});
+
+window.addEventListener('load', function() {
+  segmentIoTrackPage()
+  segmentIoTrackPhoto()
+  setPreview()
+  loadGoogleFonts(["Work Sans", "Alex Brush"])
+  var events = [{"id":4236749,"member_wedding_id":1644828,"type":"WeddingEvent","event_date":"2018-05-25T18:00:00.000Z","attire":null,"event_name":"Rehearsal Dinner/Welcoming Party","meals":[{"id":901091,"name":"BBQ Buffet","event_id":4236749}]},{"id":3809616,"member_wedding_id":1644828,"type":"Ceremony","event_date":"2018-05-26T15:30:00.000Z","attire":"Attire test","event_name":"Wedding","meals":[{"id":901089,"name":"Vegetarian","event_id":3809616},{"id":901088,"name":"Salmon","event_id":3809616},{"id":901087,"name":"Steak","event_id":3809616}]},{"id":4236760,"member_wedding_id":1644828,"type":"WeddingEvent","event_date":null,"attire":null,"event_name":"Brunch","meals":[]}];
+
+})</script></body></html>
